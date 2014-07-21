@@ -17,6 +17,10 @@
 		25E0F84D197D8B6600668F79 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F84B197D8AD400668F79 /* Person.swift */; };
 		25E0F84F197DAAD500668F79 /* Husky Puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */; };
 		25E0F850197DAAD500668F79 /* Husky Puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */; };
+		25E0F852197DBA2C00668F79 /* Class Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F851197DBA2C00668F79 /* Class Roster.plist */; };
+		25E0F853197DBA2C00668F79 /* Class Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F851197DBA2C00668F79 /* Class Roster.plist */; };
+		25E0F855197DBCC300668F79 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F854197DBCC300668F79 /* ViewControllerTests.swift */; };
+		25E0F856197DBD1E00668F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F82B197D877C00668F79 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,8 @@
 		25E0F849197D89CE00668F79 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		25E0F84B197D8AD400668F79 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Husky Puppy.jpg"; path = "../Husky Puppy.jpg"; sourceTree = "<group>"; };
+		25E0F851197DBA2C00668F79 /* Class Roster.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Class Roster.plist"; sourceTree = "<group>"; };
+		25E0F854197DBCC300668F79 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				25E0F828197D877C00668F79 /* Info.plist */,
+				25E0F851197DBA2C00668F79 /* Class Roster.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -108,6 +115,7 @@
 			children = (
 				25E0F83C197D877C00668F79 /* ClassRosterB19Tests.swift */,
 				25E0F849197D89CE00668F79 /* PersonTests.swift */,
+				25E0F854197DBCC300668F79 /* ViewControllerTests.swift */,
 				25E0F83A197D877C00668F79 /* Supporting Files */,
 			);
 			path = ClassRosterB19Tests;
@@ -225,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E0F82F197D877C00668F79 /* Main.storyboard in Resources */,
+				25E0F852197DBA2C00668F79 /* Class Roster.plist in Resources */,
 				25E0F831197D877C00668F79 /* Images.xcassets in Resources */,
 				25E0F84F197DAAD500668F79 /* Husky Puppy.jpg in Resources */,
 			);
@@ -235,6 +244,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E0F850197DAAD500668F79 /* Husky Puppy.jpg in Resources */,
+				25E0F853197DBA2C00668F79 /* Class Roster.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E0F856197DBD1E00668F79 /* ViewController.swift in Sources */,
 				25E0F84D197D8B6600668F79 /* Person.swift in Sources */,
 				25E0F84A197D89CE00668F79 /* PersonTests.swift in Sources */,
+				25E0F855197DBCC300668F79 /* ViewControllerTests.swift in Sources */,
 				25E0F83D197D877C00668F79 /* ClassRosterB19Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

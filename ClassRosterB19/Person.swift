@@ -11,21 +11,11 @@ import UIKit
 
 class Person {
     
-//    John Clem
-//    Brad Johnson
-//    Jeff Gayle
-//    Leonardo Lee
-//    Mike Tirenin
-//    Victor Adu
-//    Kirby Shabaga
-//    Collin Atherton
-//    Alex Rice
-//    Dan Hoang
-    
     var firstName : String
     var lastName : String
     var image : UIImage?
     
+//    var rosterArray = [Person]()
     
     init(firstName: String, lastName: String) {
         self.firstName = firstName
@@ -34,6 +24,11 @@ class Person {
     
     func fullName() -> String {
         return self.firstName + self.lastName
+    }
+    
+    func assignImage() -> UIImage {
+        self.image = UIImage(named: "Husky Puppy.jpg")
+        return self.image!
     }
     
 }
