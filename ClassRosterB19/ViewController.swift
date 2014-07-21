@@ -12,7 +12,7 @@ class ViewController: UIViewController {
                             
     override func viewDidLoad() {
         super.viewDidLoad()
-        createArray()
+//        createArray()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,19 +33,26 @@ class ViewController: UIViewController {
     let rice = Person(firstName: "Alex", lastName: "Rice")
     let hoang = Person (firstName: "Dan", lastName: "Hoang")
     
-    func createArray() -> Array<Person> {
+//    func createArray() -> Array<Person> {
+//
+//        rosterArray.append(clem)
+//        rosterArray.append(johnson)
+//        rosterArray.append(gayle)
+//        rosterArray.append(lee)
+//        rosterArray.append(tirenin)
+//        rosterArray.append(adu)
+//        rosterArray.append(shabaga)
+//        rosterArray.append(atherton)
+//        rosterArray.append(rice)
+//        rosterArray.append(hoang)
+//        
+//        return rosterArray
+//    }
+    
 
-        rosterArray.append(clem)
-        rosterArray.append(johnson)
-        rosterArray.append(gayle)
-        rosterArray.append(lee)
-        rosterArray.append(tirenin)
-        rosterArray.append(adu)
-        rosterArray.append(shabaga)
-        rosterArray.append(atherton)
-        rosterArray.append(rice)
-        rosterArray.append(hoang)
-        
+    func arrayFromPList() -> Array<Person> {
+        var plist = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Class Roster", ofType: ".plist"))
+        rosterArray = plist as Array<Person>
         return rosterArray
     }
     
