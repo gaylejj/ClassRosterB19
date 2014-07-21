@@ -15,6 +15,8 @@
 		25E0F84A197D89CE00668F79 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F849197D89CE00668F79 /* PersonTests.swift */; };
 		25E0F84C197D8AD400668F79 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F84B197D8AD400668F79 /* Person.swift */; };
 		25E0F84D197D8B6600668F79 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F84B197D8AD400668F79 /* Person.swift */; };
+		25E0F84F197DAAD500668F79 /* Husky Puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */; };
+		25E0F850197DAAD500668F79 /* Husky Puppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 		25E0F83C197D877C00668F79 /* ClassRosterB19Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassRosterB19Tests.swift; sourceTree = "<group>"; };
 		25E0F849197D89CE00668F79 /* PersonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		25E0F84B197D8AD400668F79 /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Husky Puppy.jpg"; path = "../Husky Puppy.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				25E0F829197D877C00668F79 /* AppDelegate.swift */,
 				25E0F82D197D877C00668F79 /* Main.storyboard */,
 				25E0F830197D877C00668F79 /* Images.xcassets */,
+				25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */,
 				25E0F827197D877C00668F79 /* Supporting Files */,
 			);
 			path = ClassRosterB19;
@@ -222,6 +226,7 @@
 			files = (
 				25E0F82F197D877C00668F79 /* Main.storyboard in Resources */,
 				25E0F831197D877C00668F79 /* Images.xcassets in Resources */,
+				25E0F84F197DAAD500668F79 /* Husky Puppy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +234,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E0F850197DAAD500668F79 /* Husky Puppy.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

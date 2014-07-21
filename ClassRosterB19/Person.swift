@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Person {
     
@@ -23,7 +24,8 @@ class Person {
     
     var firstName : String
     var lastName : String
-//    var middleName = "James"
+    var image : UIImage?
+    
     
     init(firstName: String, lastName: String) {
         self.firstName = firstName
