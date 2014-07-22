@@ -27,14 +27,15 @@ class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegat
     }
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonTableViewCell
     
         var singlePerson : Person
     
         singlePerson = people[indexPath.row]
     
-        cell.textLabel.text = singlePerson.firstName
-        cell.detailTextLabel.text = singlePerson.lastName
+        cell.firstNameLabel.text = singlePerson.firstName
+        cell.lastNameLabel.text = singlePerson.lastName
+        cell.personImageView.image = singlePerson.image?
         
         cell.editing = true
     
