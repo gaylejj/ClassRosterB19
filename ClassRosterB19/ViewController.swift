@@ -8,11 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-                            
+class ViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    
+    var people = Person.arrayFromPList()
+    @IBOutlet var tableview : UITableView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        createArray()
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        tableview!.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,47 +26,54 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    var rosterArray = [Person]()
+    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
     
-    let clem = Person(firstName: "John", lastName: "Clem")
-    let johnson = Person(firstName: "Brad", lastName: "Johnson")
-    let gayle = Person(firstName: "Jeff", lastName: "Gayle")
-    let lee = Person(firstName: "Leonardo", lastName: "Lee")
-    let tirenin = Person(firstName: "Mike", lastName: "Tirenin")
-    let adu = Person(firstName: "Victor", lastName: "Adu")
-    let shabaga = Person(firstName: "Kirby", lastName: "Shabaga")
-    let atherton = Person(firstName: "Collin", lastName: "Atherton")
-    let rice = Person(firstName: "Alex", lastName: "Rice")
-    let hoang = Person (firstName: "Dan", lastName: "Hoang")
+        var singlePerson : Person
     
-//    func createArray() -> Array<Person> {
-//
-//        rosterArray.append(clem)
-//        rosterArray.append(johnson)
-//        rosterArray.append(gayle)
-//        rosterArray.append(lee)
-//        rosterArray.append(tirenin)
-//        rosterArray.append(adu)
-//        rosterArray.append(shabaga)
-//        rosterArray.append(atherton)
-//        rosterArray.append(rice)
-//        rosterArray.append(hoang)
-//        
-//        return rosterArray
-//    }
+        singlePerson = people[indexPath.row]
     
-
-    func arrayFromPList() -> Array<Person> {
-        var plist = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Class Roster", ofType: ".plist"))
-        rosterArray = plist as Array<Person>
-        return rosterArray
+        cell.textLabel.text = singlePerson.firstName
+        cell.detailTextLabel.text = singlePerson.lastName
+        
+        cell.editing = true
+    
+        return cell
     }
     
+    func tableView(tableView: UITableView!,numberOfRowsInSection section: Int) -> Int {
+        return people.count
+    }
     
+    func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
+        if (editingStyle == UITableViewCellEditingStyle.Delete) {
+            people.removeAtIndex(indexPath.row)
+            tableview!.deleteRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Fade)
+        }
+    }
     
-//    func sortArray(Array<T>) -> Array<T> {
-//        
-//    }
+    func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool
+    {
+        return true
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "ShowDetail" {
+            let destination = segue.destinationViewController as DetailViewController
+            let indexPath : NSIndexPath = tableview!.indexPathForSelectedRow()
+            
+            destination.person = people[indexPath.row]
+            tableview!.deselectRowAtIndexPath(indexPath, animated: true)
+        } else if segue.identifier == "AddPerson" {
+            let destination = segue.destinationViewController as DetailViewController
+            
+            var newPerson = Person(firstName: "", lastName: "")
+            newPerson.image = UIImage(named: "Husky Puppy.jpg")
+            people.append(newPerson)
+            destination.person = newPerson
+        }
+    }
+
     
 }
 

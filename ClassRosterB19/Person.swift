@@ -15,11 +15,29 @@ class Person {
     var lastName : String
     var image : UIImage?
     
-//    var rosterArray = [Person]()
-    
     init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName
+    }
+    
+    class func arrayFromPList() -> Array<Person> {
+        //        var plist = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Class Roster", ofType: "plist"))
+        
+        var roster = Array<Person>()
+        
+        let path = NSBundle.mainBundle().pathForResource("Class Roster", ofType: "plist")
+        
+        let plistArray = NSArray(contentsOfFile: path)
+        
+        for obj in plistArray {
+            if let person = obj as? Dictionary<String, String> {
+                let firstName = person["firstName"] as String
+                let lastName = person["lastName"] as String
+                roster.append(Person(firstName: firstName, lastName: lastName))
+            }
+        }
+        
+        return roster
     }
     
     func fullName() -> String {

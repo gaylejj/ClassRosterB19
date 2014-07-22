@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25115385197EEAC40008B59B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25115384197EEAC40008B59B /* DetailViewController.swift */; };
 		25E0F82A197D877C00668F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F829197D877C00668F79 /* AppDelegate.swift */; };
 		25E0F82C197D877C00668F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F82B197D877C00668F79 /* ViewController.swift */; };
 		25E0F82F197D877C00668F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F82D197D877C00668F79 /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25115384197EEAC40008B59B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		25E0F824197D877C00668F79 /* ClassRosterB19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRosterB19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E0F828197D877C00668F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E0F829197D877C00668F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,7 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				25E0F828197D877C00668F79 /* Info.plist */,
-				25E0F851197DBA2C00668F79 /* Class Roster.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				25E0F84B197D8AD400668F79 /* Person.swift */,
+				25E0F851197DBA2C00668F79 /* Class Roster.plist */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				25E0F82B197D877C00668F79 /* ViewController.swift */,
+				25115384197EEAC40008B59B /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 				25E0F84C197D8AD400668F79 /* Person.swift in Sources */,
 				25E0F82C197D877C00668F79 /* ViewController.swift in Sources */,
 				25E0F82A197D877C00668F79 /* AppDelegate.swift in Sources */,
+				25115385197EEAC40008B59B /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +453,7 @@
 				25E0F842197D877C00668F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		25E0F843197D877C00668F79 /* Build configuration list for PBXNativeTarget "ClassRosterB19Tests" */ = {
 			isa = XCConfigurationList;
@@ -457,6 +462,7 @@
 				25E0F845197D877C00668F79 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

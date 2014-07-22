@@ -22,12 +22,11 @@ class ViewControllerTests: XCTestCase {
     }
     
     func testCreateArray() {
-        var controller = ViewController()
-        var roster = controller.arrayFromPList()
+        var roster = Person.arrayFromPList()
         XCTAssertNotNil(roster, "roster array could not be created")
-        for i in 0..<roster.count {
-            println(roster[i])
-        }
+//        for i in 0..<roster.count {
+            println(String(roster.count) + " Objects in the array")
+//        }
     }
 
 }
