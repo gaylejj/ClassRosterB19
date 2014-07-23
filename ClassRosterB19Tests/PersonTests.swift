@@ -56,8 +56,6 @@ class PersonTests: XCTestCase {
         XCTAssertNotNil(person.assignImage(), "person's image could not be assigned")
     }
     
-//    func testArray() {
-//        XCTAssertNotNil(<#expression: @auto_closure () -> AnyObject?#>, "person array could not be created")
-//    }
 
+    
 }

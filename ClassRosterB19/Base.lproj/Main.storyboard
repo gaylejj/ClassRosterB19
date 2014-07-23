@@ -7,7 +7,7 @@
         <!--Roster-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClassRosterB19" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RosterViewController" customModule="ClassRosterB19" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -51,8 +51,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="9Pl-BN-dCf"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M7j-Xl-pVD"/>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="zi1-nP-0G6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="d7O-Bl-Gvp"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -66,7 +66,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableview" destination="R1B-Ix-HZf" id="kuO-oK-WZi"/>
+                        <outlet property="tableview" destination="R1B-Ix-HZf" id="gzA-CD-fF9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -76,7 +76,6 @@
         <!--Detail View Controller-->
         <scene sceneID="7UC-4G-btI">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="anG-nZ-nxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="VX6-qr-ChW" customClass="DetailViewController" customModule="ClassRosterB19" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jqd-KU-bGP"/>
@@ -108,6 +107,7 @@
                         <outlet property="personImageView" destination="DJQ-1H-j64" id="u8o-ce-O6l"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="anG-nZ-nxc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2067" y="141"/>
         </scene>
