@@ -13,6 +13,8 @@ class PersonTableViewCell: UITableViewCell {
     @IBOutlet weak var firstNameLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var personImageView: UIImageView!
+    @IBOutlet weak var twitterHandle: UILabel!
+    @IBOutlet weak var githubHandle: UILabel!
 
     init(style: UITableViewCellStyle, reuseIdentifier: String) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

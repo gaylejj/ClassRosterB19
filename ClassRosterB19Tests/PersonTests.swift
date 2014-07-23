@@ -56,6 +56,16 @@ class PersonTests: XCTestCase {
         XCTAssertNotNil(person.assignImage(), "person's image could not be assigned")
     }
     
-
+    func testTwitterHandle() {
+        var person = Person(firstName: "Jeff", lastName: "Gayle")
+        person.twitterHandle = "@gaylejj"
+        XCTAssertNotNil(person.twitterHandle, "person's twitter handle could not be assigned")
+    }
+    
+    func testGithubHandle() {
+        var person = Person(firstName: "Jeff", lastName: "Gayle")
+        person.githubHandle = "@gaylejj"
+        XCTAssertNotNil(person.githubHandle, "person's github handle could not be assigned")
+    }
     
 }

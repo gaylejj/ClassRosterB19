@@ -10,11 +10,23 @@ import UIKit
 
 class RosterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: Variables/Outlets
     var people = Person.arrayFromPList()
     @IBOutlet var tableview: UITableView?
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableview!.dataSource = self
+        self.tableview!.delegate = self
+        self.title = "Roster"
+        self.navigationController.navigationItem.title = "Roster"
+        
+        let addPerson = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addPersonAction")
+        
+        self.navigationItem.rightBarButtonItem = addPerson
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -25,6 +37,8 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK: Tableview Delegates
     
     func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as PersonTableViewCell
@@ -37,7 +51,18 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
         cell.lastNameLabel.text = singlePerson.lastName
         cell.personImageView.image = singlePerson.image?
         
-        cell.editing = true
+        if singlePerson.image? == nil {
+            cell.personImageView.hidden = true
+        } else {
+            cell.personImageView.hidden = false
+            cell.personImageView.layer.cornerRadius = 0.5 * cell.personImageView.frame.width
+            cell.personImageView.layer.masksToBounds = true
+            cell.personImageView.layer.borderColor = UIColor.blackColor().CGColor
+            cell.personImageView.layer.borderWidth = 2.0
+        }
+        
+        cell.twitterHandle.text = singlePerson.twitterHandle?
+        cell.githubHandle.text = singlePerson.githubHandle?
         
         return cell
     }
@@ -58,22 +83,49 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
         return true
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if segue.identifier == "ShowDetail" {
-            let destination = segue.destinationViewController as DetailViewController
-            let indexPath : NSIndexPath = tableview!.indexPathForSelectedRow()
-            
-            destination.person = people[indexPath.row]
-            tableview!.deselectRowAtIndexPath(indexPath, animated: true)
-        } else if segue.identifier == "AddPerson" {
-            let destination = segue.destinationViewController as DetailViewController
-            
-            var newPerson = Person(firstName: "", lastName: "")
-            newPerson.image = UIImage(named: "Husky Puppy.jpg")
-            people.append(newPerson)
-            destination.person = newPerson
+    //MARK: Segue
+    
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        if segue.identifier == "ShowDetail" {
+//            let destination = segue.destinationViewController as DetailViewController
+//            let indexPath : NSIndexPath = tableview!.indexPathForSelectedRow()
+//            
+//            destination.person = people[indexPath.row]
+//            tableview!.deselectRowAtIndexPath(indexPath, animated: true)
+//        } else if segue.identifier == "AddPerson" {
+//            let destination = segue.destinationViewController as DetailViewController
+//            
+//            var newPerson = Person(firstName: "", lastName: "")
+//            newPerson.image = UIImage(named: "Husky Puppy.jpg")
+//            people.append(newPerson)
+//            destination.person = newPerson
+//        }
+//    }
+    
+    func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        
+        let detail = self.storyboard.instantiateViewControllerWithIdentifier("Detail") as DetailViewController
+        detail.person = self.people[indexPath.row]
+        
+        if self.navigationController {
+            self.navigationController.pushViewController(detail, animated: true)
         }
     }
     
+    func addPersonAction() {
+        let detail = self.storyboard.instantiateViewControllerWithIdentifier("Detail") as DetailViewController
+        
+        var newPerson = Person(firstName: "", lastName: "")
+        newPerson.twitterHandle = nil
+        newPerson.githubHandle = nil
+        
+        self.people.append(newPerson)
+        
+        detail.person = newPerson
+        
+        if self.navigationController {
+            self.navigationController.pushViewController(detail, animated: true)
+        }
+    }
     
 }

@@ -15,10 +15,15 @@ class Person {
     var lastName : String
     var image : UIImage?
     
+    var twitterHandle : String?
+    var githubHandle : String?
+    
     init(firstName: String, lastName: String) {
         self.firstName = firstName
         self.lastName = lastName
     }
+    
+    // MARK: .plist load
     
     class func arrayFromPList() -> Array<Person> {
         //        var plist = NSArray(contentsOfFile: NSBundle.mainBundle().pathForResource("Class Roster", ofType: "plist"))

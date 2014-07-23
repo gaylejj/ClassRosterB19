@@ -8,6 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		25115385197EEAC40008B59B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25115384197EEAC40008B59B /* DetailViewController.swift */; };
+		25434E2A198012B200D30AE5 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25115384197EEAC40008B59B /* DetailViewController.swift */; };
+		25434E2B198012B500D30AE5 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589BB9E197F55A4001C0860 /* RosterViewController.swift */; };
+		25434E2C198012C100D30AE5 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25623B6E197F1AF00019D738 /* PersonTableViewCell.swift */; };
+		25434E37198070B700D30AE5 /* angryPuppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E2D198070B700D30AE5 /* angryPuppy.jpg */; };
+		25434E38198070B700D30AE5 /* derpPuppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E2E198070B700D30AE5 /* derpPuppy.jpg */; };
+		25434E39198070B700D30AE5 /* dogWalkingPuppies.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E2F198070B700D30AE5 /* dogWalkingPuppies.jpeg */; };
+		25434E3A198070B700D30AE5 /* guilyPuppy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E30198070B700D30AE5 /* guilyPuppy.jpeg */; };
+		25434E3B198070B700D30AE5 /* labPuppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E31198070B700D30AE5 /* labPuppy.jpg */; };
+		25434E3C198070B700D30AE5 /* puppyAndBunny.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E32198070B700D30AE5 /* puppyAndBunny.jpg */; };
+		25434E3D198070B700D30AE5 /* sadPom.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E33198070B700D30AE5 /* sadPom.jpeg */; };
+		25434E3E198070B700D30AE5 /* sleepingPuppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E34198070B700D30AE5 /* sleepingPuppy.jpg */; };
+		25434E3F198070B700D30AE5 /* smallPuppy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E35198070B700D30AE5 /* smallPuppy.jpeg */; };
+		25434E40198070B700D30AE5 /* yawningPuppy.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 25434E36198070B700D30AE5 /* yawningPuppy.jpg */; };
 		25623B6F197F1AF00019D738 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25623B6E197F1AF00019D738 /* PersonTableViewCell.swift */; };
 		2589BB9F197F55A4001C0860 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589BB9E197F55A4001C0860 /* RosterViewController.swift */; };
 		25E0F82A197D877C00668F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F829197D877C00668F79 /* AppDelegate.swift */; };
@@ -38,6 +51,16 @@
 
 /* Begin PBXFileReference section */
 		25115384197EEAC40008B59B /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		25434E2D198070B700D30AE5 /* angryPuppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angryPuppy.jpg; sourceTree = "<group>"; };
+		25434E2E198070B700D30AE5 /* derpPuppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = derpPuppy.jpg; sourceTree = "<group>"; };
+		25434E2F198070B700D30AE5 /* dogWalkingPuppies.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dogWalkingPuppies.jpeg; sourceTree = "<group>"; };
+		25434E30198070B700D30AE5 /* guilyPuppy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guilyPuppy.jpeg; sourceTree = "<group>"; };
+		25434E31198070B700D30AE5 /* labPuppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = labPuppy.jpg; sourceTree = "<group>"; };
+		25434E32198070B700D30AE5 /* puppyAndBunny.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = puppyAndBunny.jpg; sourceTree = "<group>"; };
+		25434E33198070B700D30AE5 /* sadPom.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sadPom.jpeg; sourceTree = "<group>"; };
+		25434E34198070B700D30AE5 /* sleepingPuppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sleepingPuppy.jpg; sourceTree = "<group>"; };
+		25434E35198070B700D30AE5 /* smallPuppy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = smallPuppy.jpeg; sourceTree = "<group>"; };
+		25434E36198070B700D30AE5 /* yawningPuppy.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yawningPuppy.jpg; sourceTree = "<group>"; };
 		25623B6E197F1AF00019D738 /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		2589BB9E197F55A4001C0860 /* RosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RosterViewController.swift; sourceTree = "<group>"; };
 		25E0F824197D877C00668F79 /* ClassRosterB19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRosterB19.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +97,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25434E41198070BB00D30AE5 /* Puppy Photos */ = {
+			isa = PBXGroup;
+			children = (
+				25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */,
+				25434E2D198070B700D30AE5 /* angryPuppy.jpg */,
+				25434E2E198070B700D30AE5 /* derpPuppy.jpg */,
+				25434E2F198070B700D30AE5 /* dogWalkingPuppies.jpeg */,
+				25434E30198070B700D30AE5 /* guilyPuppy.jpeg */,
+				25434E31198070B700D30AE5 /* labPuppy.jpg */,
+				25434E32198070B700D30AE5 /* puppyAndBunny.jpg */,
+				25434E33198070B700D30AE5 /* sadPom.jpeg */,
+				25434E34198070B700D30AE5 /* sleepingPuppy.jpg */,
+				25434E35198070B700D30AE5 /* smallPuppy.jpeg */,
+				25434E36198070B700D30AE5 /* yawningPuppy.jpg */,
+			);
+			name = "Puppy Photos";
+			sourceTree = "<group>";
+		};
 		25E0F81B197D877C00668F79 = {
 			isa = PBXGroup;
 			children = (
@@ -101,7 +142,7 @@
 				25E0F829197D877C00668F79 /* AppDelegate.swift */,
 				25E0F82D197D877C00668F79 /* Main.storyboard */,
 				25E0F830197D877C00668F79 /* Images.xcassets */,
-				25E0F84E197DAAD500668F79 /* Husky Puppy.jpg */,
+				25434E41198070BB00D30AE5 /* Puppy Photos */,
 				25E0F827197D877C00668F79 /* Supporting Files */,
 			);
 			path = ClassRosterB19;
@@ -155,8 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				25E0F82B197D877C00668F79 /* ViewController.swift */,
-				25115384197EEAC40008B59B /* DetailViewController.swift */,
 				2589BB9E197F55A4001C0860 /* RosterViewController.swift */,
+				25115384197EEAC40008B59B /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -241,10 +282,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25434E40198070B700D30AE5 /* yawningPuppy.jpg in Resources */,
+				25434E37198070B700D30AE5 /* angryPuppy.jpg in Resources */,
+				25434E3E198070B700D30AE5 /* sleepingPuppy.jpg in Resources */,
+				25434E39198070B700D30AE5 /* dogWalkingPuppies.jpeg in Resources */,
+				25434E3D198070B700D30AE5 /* sadPom.jpeg in Resources */,
 				25E0F82F197D877C00668F79 /* Main.storyboard in Resources */,
+				25434E3A198070B700D30AE5 /* guilyPuppy.jpeg in Resources */,
 				25E0F852197DBA2C00668F79 /* Class Roster.plist in Resources */,
+				25434E38198070B700D30AE5 /* derpPuppy.jpg in Resources */,
 				25E0F831197D877C00668F79 /* Images.xcassets in Resources */,
+				25434E3F198070B700D30AE5 /* smallPuppy.jpeg in Resources */,
+				25434E3B198070B700D30AE5 /* labPuppy.jpg in Resources */,
 				25E0F84F197DAAD500668F79 /* Husky Puppy.jpg in Resources */,
+				25434E3C198070B700D30AE5 /* puppyAndBunny.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +331,11 @@
 				25E0F856197DBD1E00668F79 /* ViewController.swift in Sources */,
 				25E0F84D197D8B6600668F79 /* Person.swift in Sources */,
 				25E0F84A197D89CE00668F79 /* PersonTests.swift in Sources */,
+				25434E2A198012B200D30AE5 /* DetailViewController.swift in Sources */,
 				25E0F855197DBCC300668F79 /* ViewControllerTests.swift in Sources */,
 				25E0F83D197D877C00668F79 /* ClassRosterB19Tests.swift in Sources */,
+				25434E2C198012C100D30AE5 /* PersonTableViewCell.swift in Sources */,
+				25434E2B198012B500D30AE5 /* RosterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
