@@ -131,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DJQ-1H-j64">
-                                <rect key="frame" x="200" y="202" width="200" height="200"/>
+                                <rect key="frame" x="200" y="200" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Elw-1N-h1K"/>
                                     <constraint firstAttribute="height" constant="200" id="dcF-W3-hCW"/>
@@ -190,24 +190,28 @@
                         <constraints>
                             <constraint firstItem="Hv8-gz-gLk" firstAttribute="top" secondItem="jqd-KU-bGP" secondAttribute="bottom" constant="20" symbolic="YES" id="2LC-Bk-UeB"/>
                             <constraint firstItem="Urp-54-9wQ" firstAttribute="top" secondItem="bne-aP-vM0" secondAttribute="bottom" constant="8" symbolic="YES" id="58Z-2E-V18"/>
-                            <constraint firstAttribute="centerX" secondItem="bne-aP-vM0" secondAttribute="centerX" id="CGu-6t-6uO"/>
-                            <constraint firstAttribute="centerX" secondItem="woo-Od-mZU" secondAttribute="centerX" id="IwX-Qb-POU"/>
-                            <constraint firstAttribute="centerX" secondItem="Urp-54-9wQ" secondAttribute="centerX" id="UEP-6H-CP8"/>
+                            <constraint firstAttribute="centerX" secondItem="Hv8-gz-gLk" secondAttribute="centerX" id="8QL-cY-cBy"/>
+                            <constraint firstItem="woo-Od-mZU" firstAttribute="leading" secondItem="Urp-54-9wQ" secondAttribute="leading" id="GBG-l6-pkO"/>
+                            <constraint firstItem="DJQ-1H-j64" firstAttribute="top" secondItem="jqd-KU-bGP" secondAttribute="bottom" constant="180" id="Ipx-TU-fwC"/>
+                            <constraint firstItem="woo-Od-mZU" firstAttribute="leading" secondItem="Hv8-gz-gLk" secondAttribute="leading" id="ViQ-fy-Fcj"/>
                             <constraint firstItem="woo-Od-mZU" firstAttribute="top" secondItem="Hv8-gz-gLk" secondAttribute="bottom" constant="8" symbolic="YES" id="cQe-Fx-j1F"/>
-                            <constraint firstItem="DJQ-1H-j64" firstAttribute="top" secondItem="Urp-54-9wQ" secondAttribute="bottom" constant="30" id="dfJ-fW-l1C"/>
                             <constraint firstAttribute="centerX" secondItem="DJQ-1H-j64" secondAttribute="centerX" id="eCC-Rg-0hf"/>
                             <constraint firstItem="bne-aP-vM0" firstAttribute="top" secondItem="woo-Od-mZU" secondAttribute="bottom" constant="8" symbolic="YES" id="ohF-7p-eg7"/>
-                            <constraint firstAttribute="centerX" secondItem="Hv8-gz-gLk" secondAttribute="centerX" id="zFj-po-CV1"/>
+                            <constraint firstItem="woo-Od-mZU" firstAttribute="leading" secondItem="bne-aP-vM0" secondAttribute="leading" id="tV9-o9-4by"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="centeringFirstNameConstraint" destination="8QL-cY-cBy" id="D1B-k6-YgG"/>
+                        <outlet property="centeringImageViewConstraint" destination="eCC-Rg-0hf" id="nqu-GU-MCd"/>
                         <outlet property="firstNameTextField" destination="Hv8-gz-gLk" id="TSz-mz-s9u"/>
                         <outlet property="githubHandleTextField" destination="Urp-54-9wQ" id="Lai-Gr-WEw"/>
                         <outlet property="lastNameTextField" destination="woo-Od-mZU" id="l1J-5E-m8C"/>
                         <outlet property="personImageView" destination="DJQ-1H-j64" id="u8o-ce-O6l"/>
+                        <outlet property="topFirstNameConstraint" destination="2LC-Bk-UeB" id="2Cx-eE-dK4"/>
+                        <outlet property="topImageViewConstraint" destination="Ipx-TU-fwC" id="5yc-C2-ZdL"/>
                         <outlet property="twitterHandleTextField" destination="bne-aP-vM0" id="jpF-H3-l6v"/>
                     </connections>
                 </viewController>

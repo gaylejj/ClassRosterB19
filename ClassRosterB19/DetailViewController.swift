@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITraitEnvironment {
     
     //MARK: Variables/Outlets/Puppy Array
     var person : Person!
@@ -21,6 +21,12 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     @IBOutlet weak var twitterHandleTextField: UITextField!
     @IBOutlet weak var githubHandleTextField: UITextField!
+    
+    @IBOutlet weak var topImageViewConstraint: NSLayoutConstraint!
+    @IBOutlet weak var centeringImageViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var topFirstNameConstraint: NSLayoutConstraint!
+    @IBOutlet weak var centeringFirstNameConstraint: NSLayoutConstraint!
     
     let textFieldPadding = 100
     
@@ -47,6 +53,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
 
     
     override func viewDidLoad() {
+        
+        self.traitCollection.horizontalSizeClass    
         super.viewDidLoad()
         self.title = "Detail"
         self.navigationController.navigationItem.title = "Detail"
@@ -74,6 +82,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     override func viewWillAppear(animated: Bool) {
         personImageView.layer.cornerRadius = 0.5 * self.personImageView.frame.width
         personImageView.layer.masksToBounds = true
+        println(self.view.frame.height)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -160,6 +169,71 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.personImageView.image = image
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
+        println(self.traitCollection.verticalSizeClass.toRaw())
+        
+        var centeringImageViewConstant = CGFloat(0.0)
+        var centeringFirstNameConstant = CGFloat(0.0)
+        var topImageViewConstant = CGFloat(180.0)
+        var topFirstNameConstant = CGFloat(8.0)
+        
+        
+        println(self.view.frame.height)
+        if self.view.frame.height == 320.0 {
+            centeringImageViewConstant = 130.0
+            centeringFirstNameConstant = -115.0
+            topImageViewConstant = 40.0
+            topFirstNameConstant = 65.0
+        }
+        else {
+            centeringImageViewConstant = 180.0
+            centeringFirstNameConstant = -150.0
+            topImageViewConstant = 30.0
+            topFirstNameConstant = 60.0
+        }
+        
+        if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Compact {
+            println("Changed")
+            println(topImageViewConstraint.constant)
+            topImageViewConstraint.constant = topImageViewConstant
+            println(topImageViewConstraint.constant)
+            
+            println(centeringImageViewConstraint.constant)
+            centeringImageViewConstraint.constant = centeringImageViewConstant
+            println(centeringImageViewConstraint.constant)
+
+            println(topFirstNameConstraint.constant)
+            topFirstNameConstraint.constant = topFirstNameConstant
+            println(topFirstNameConstraint.constant)
+
+            println(centeringFirstNameConstraint.constant)
+            centeringFirstNameConstraint.constant = centeringFirstNameConstant
+            println(centeringFirstNameConstraint.constant)
+
+        } else if self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClass.Regular {
+            println(topImageViewConstraint.constant)
+            topImageViewConstraint.constant = 180
+            println(topImageViewConstraint.constant)
+            
+            println(centeringImageViewConstraint.constant)
+            centeringImageViewConstraint.constant = 0
+            println(centeringImageViewConstraint.constant)
+            
+            println(topFirstNameConstraint.constant)
+            topFirstNameConstraint.constant = 8
+            println(topFirstNameConstraint.constant)
+            
+            println(centeringFirstNameConstraint.constant)
+            centeringFirstNameConstraint.constant = 0
+            println(centeringFirstNameConstraint.constant)
+
+        }
+    }
+    
+    
+    
+    
     
 
 }
