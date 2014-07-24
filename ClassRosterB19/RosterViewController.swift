@@ -14,8 +14,6 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
     var people = Person.arrayFromPList()
     @IBOutlet var tableview: UITableView?
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableview!.dataSource = self
@@ -83,25 +81,6 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
         return true
     }
     
-    //MARK: Segue
-    
-//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-//        if segue.identifier == "ShowDetail" {
-//            let destination = segue.destinationViewController as DetailViewController
-//            let indexPath : NSIndexPath = tableview!.indexPathForSelectedRow()
-//            
-//            destination.person = people[indexPath.row]
-//            tableview!.deselectRowAtIndexPath(indexPath, animated: true)
-//        } else if segue.identifier == "AddPerson" {
-//            let destination = segue.destinationViewController as DetailViewController
-//            
-//            var newPerson = Person(firstName: "", lastName: "")
-//            newPerson.image = UIImage(named: "Husky Puppy.jpg")
-//            people.append(newPerson)
-//            destination.person = newPerson
-//        }
-//    }
-    
     func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
         
         let detail = self.storyboard.instantiateViewControllerWithIdentifier("Detail") as DetailViewController
@@ -129,3 +108,22 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
 }
+
+//MARK: DEPRECIATED - Segue
+
+//    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+//        if segue.identifier == "ShowDetail" {
+//            let destination = segue.destinationViewController as DetailViewController
+//            let indexPath : NSIndexPath = tableview!.indexPathForSelectedRow()
+//
+//            destination.person = people[indexPath.row]
+//            tableview!.deselectRowAtIndexPath(indexPath, animated: true)
+//        } else if segue.identifier == "AddPerson" {
+//            let destination = segue.destinationViewController as DetailViewController
+//
+//            var newPerson = Person(firstName: "", lastName: "")
+//            newPerson.image = UIImage(named: "Husky Puppy.jpg")
+//            people.append(newPerson)
+//            destination.person = newPerson
+//        }
+//    }

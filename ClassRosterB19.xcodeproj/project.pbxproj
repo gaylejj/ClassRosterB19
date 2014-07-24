@@ -24,7 +24,6 @@
 		25623B6F197F1AF00019D738 /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25623B6E197F1AF00019D738 /* PersonTableViewCell.swift */; };
 		2589BB9F197F55A4001C0860 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2589BB9E197F55A4001C0860 /* RosterViewController.swift */; };
 		25E0F82A197D877C00668F79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F829197D877C00668F79 /* AppDelegate.swift */; };
-		25E0F82C197D877C00668F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F82B197D877C00668F79 /* ViewController.swift */; };
 		25E0F82F197D877C00668F79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F82D197D877C00668F79 /* Main.storyboard */; };
 		25E0F831197D877C00668F79 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F830197D877C00668F79 /* Images.xcassets */; };
 		25E0F83D197D877C00668F79 /* ClassRosterB19Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F83C197D877C00668F79 /* ClassRosterB19Tests.swift */; };
@@ -36,7 +35,6 @@
 		25E0F852197DBA2C00668F79 /* Class Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F851197DBA2C00668F79 /* Class Roster.plist */; };
 		25E0F853197DBA2C00668F79 /* Class Roster.plist in Resources */ = {isa = PBXBuildFile; fileRef = 25E0F851197DBA2C00668F79 /* Class Roster.plist */; };
 		25E0F855197DBCC300668F79 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F854197DBCC300668F79 /* ViewControllerTests.swift */; };
-		25E0F856197DBD1E00668F79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25E0F82B197D877C00668F79 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +64,6 @@
 		25E0F824197D877C00668F79 /* ClassRosterB19.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClassRosterB19.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25E0F828197D877C00668F79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25E0F829197D877C00668F79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		25E0F82B197D877C00668F79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		25E0F82E197D877C00668F79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		25E0F830197D877C00668F79 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		25E0F836197D877C00668F79 /* ClassRosterB19Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ClassRosterB19Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,7 +192,6 @@
 		25E0F848197D879100668F79 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				25E0F82B197D877C00668F79 /* ViewController.swift */,
 				2589BB9E197F55A4001C0860 /* RosterViewController.swift */,
 				25115384197EEAC40008B59B /* DetailViewController.swift */,
 			);
@@ -316,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				25E0F84C197D8AD400668F79 /* Person.swift in Sources */,
-				25E0F82C197D877C00668F79 /* ViewController.swift in Sources */,
 				2589BB9F197F55A4001C0860 /* RosterViewController.swift in Sources */,
 				25E0F82A197D877C00668F79 /* AppDelegate.swift in Sources */,
 				25623B6F197F1AF00019D738 /* PersonTableViewCell.swift in Sources */,
@@ -328,7 +323,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25E0F856197DBD1E00668F79 /* ViewController.swift in Sources */,
 				25E0F84D197D8B6600668F79 /* Person.swift in Sources */,
 				25E0F84A197D89CE00668F79 /* PersonTests.swift in Sources */,
 				25434E2A198012B200D30AE5 /* DetailViewController.swift in Sources */,
@@ -446,6 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ClassRosterB19/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -457,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = ClassRosterB19/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

@@ -8,11 +8,9 @@
 
 import UIKit
 
-class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate {
+class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
-    
-
-    //MARK: Variables/Outlets
+    //MARK: Variables/Outlets/Puppy Array
     var person : Person!
     
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -50,6 +48,13 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Detail"
+        self.navigationController.navigationItem.title = "Detail"
+        
+        let camera = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Camera, target: self, action: "changePicture")
+        
+        self.navigationItem.rightBarButtonItem = camera
+        
         loadPuppyArray()
         
         firstNameTextField.text = person.firstName
@@ -132,5 +137,29 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         
         // self.view.endEditing(true) -> Another way of doing it
     }
+    
+    //MARK: Image Picker
+    
+    func changePicture() {
+        println("Button capture")
+        var imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.editing = true
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+        } else {
+        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        }
+        
+        self.presentViewController(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
+        let image = info[UIImagePickerControllerOriginalImage] as UIImage
+        self.personImageView.image = image
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
 
 }
