@@ -30,6 +30,8 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     let textFieldPadding = 100
     
+    var imagePicker = UIImagePickerController()
+    
     func loadPuppyArray() -> UIImage {
         
         let huskyPuppy = UIImage(named: "Husky Puppy.jpg")
@@ -59,7 +61,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         self.title = "Detail"
         self.navigationController.navigationItem.title = "Detail"
         
-        let camera = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Camera, target: self, action: "changePicture")
+        let camera = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Camera, target: self, action: "changePicture:")
         
         self.navigationItem.rightBarButtonItem = camera
         
@@ -149,19 +151,38 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     
     //MARK: Image Picker
     
-    func changePicture() {
+    func changePicture(sender: AnyObject) {
         println("Button capture")
-        var imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.editing = true
+        self.imagePicker.delegate = self
+        self.imagePicker.editing = true
         
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
-            imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            let alertController = UIAlertController(title: "Choose Source Type", message: "Please choose a picture source", preferredStyle: UIAlertControllerStyle.ActionSheet)
+            
+            let cameraOption = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler: {
+                (action: UIAlertAction!) -> Void in
+                self.imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+                })
+            
+            let photoLibraryOption = UIAlertAction(title: "Photo Library", style: UIAlertActionStyle.Default, handler: {
+                (action: UIAlertAction!) -> Void in
+                self.imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+                self.presentViewController(self.imagePicker, animated: true, completion: nil)
+                })
+            
+            let cancelOption = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+            
+            alertController.addAction(cameraOption)
+            alertController.addAction(photoLibraryOption)
+            alertController.addAction(cancelOption)
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
         } else {
-        imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
         }
         
-        self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
