@@ -79,6 +79,10 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         twitterHandleTextField.text = person.twitterHandle?
         githubHandleTextField.text = person.githubHandle?
         
+        let imageTap = UITapGestureRecognizer(target: self, action: "changeOrDeleteImage:")
+        
+        self.personImageView.addGestureRecognizer(imageTap)
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -188,8 +192,11 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]!) {
         let image = info[UIImagePickerControllerOriginalImage] as UIImage
         self.personImageView.image = image
+//        self.saveToDocumentsDirectory(image)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
+    //MARK: Landscape layouts for 4s and 5s
     
     override func traitCollectionDidChange(previousTraitCollection: UITraitCollection!) {
         println(self.traitCollection.verticalSizeClass.toRaw())
@@ -252,8 +259,51 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         }
     }
     
+    //MARK: GestureRecognizer
     
-    
+    func changeOrDeleteImage(sender: AnyObject) {
+        println("Image pressed")
+        
+        let alertController = UIAlertController(title: "New Picture?", message: "Please choose a different picture", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let cancelOption = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
+        
+        let deleteOption = UIAlertAction(title: "Delete", style: UIAlertActionStyle.Destructive, handler: {(action: UIAlertAction!) -> Void in
+            
+            self.personImageView.image = nil
+            
+            })
+        
+        let cameraOption = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) -> Void in
+            
+            self.imagePicker.delegate = self
+            self.imagePicker.editing = true
+            self.imagePicker.sourceType = UIImagePickerControllerSourceType.Camera
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            
+            })
+        
+        let photoOption = UIAlertAction(title: "Photo Library", style: UIAlertActionStyle.Default, handler: {(action: UIAlertAction!) -> Void in
+            
+            self.imagePicker.delegate = self
+            self.imagePicker.editing = true
+            self.imagePicker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+            self.presentViewController(self.imagePicker, animated: true, completion: nil)
+            
+            })
+        
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera) {
+            alertController.addAction(cancelOption)
+            alertController.addAction(deleteOption)
+            alertController.addAction(cameraOption)
+            alertController.addAction(photoOption)
+        } else {
+            alertController.addAction(cancelOption)
+            alertController.addAction(deleteOption)
+            alertController.addAction(photoOption)
+        }
+        self.presentViewController(alertController, animated: true, completion: nil)
+    }
     
     
 

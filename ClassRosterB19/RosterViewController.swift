@@ -11,6 +11,7 @@ import UIKit
 class RosterViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Variables/Outlets
+    
     var people = Person.arrayFromPList()
     @IBOutlet var tableview: UITableView?
     
@@ -24,6 +25,7 @@ class RosterViewController: UIViewController, UITableViewDataSource, UITableView
         let addPerson = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add, target: self, action: "addPersonAction")
         
         self.navigationItem.rightBarButtonItem = addPerson
+        
         
     }
     
