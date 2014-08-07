@@ -16,8 +16,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         
-        let nav = UINavigationController(rootViewController: self.window!.rootViewController)
-        self.window!.rootViewController = nav
+        let device = UIDevice.currentDevice().model
+        
+        println(device)
+        
+//        if device == "iPad" {
+//            print("Ipad")
+//            self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+////            self.window!.backgroundColor = UIColor.whiteColor()
+//            var splitViewController =  UISplitViewController()
+//            var rootViewController = RosterViewController()
+//            var detailViewController = DetailViewController()
+//            splitViewController.viewControllers = [RosterViewController(), DetailViewController()]
+//            self.window!.rootViewController = splitViewController
+//            self.window!.makeKeyAndVisible()
+//            
+//        } else {
+//            println("Iphone")
+            let nav = UINavigationController(rootViewController: self.window!.rootViewController)
+            self.window!.rootViewController = nav
+//        }
+
         
         return true
     }

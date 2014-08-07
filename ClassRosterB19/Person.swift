@@ -36,8 +36,8 @@ class Person {
         
         for obj in plistArray {
             if let person = obj as? Dictionary<String, String> {
-                let firstName = person["firstName"] as String
-                let lastName = person["lastName"] as String
+                let firstName = person["firstName"] as String!
+                let lastName = person["lastName"] as String!
                 roster.append(Person(firstName: firstName, lastName: lastName))
             }
         }

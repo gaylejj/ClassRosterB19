@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6185.11" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6190.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
     </dependencies>
     <scenes>
         <!--Roster View Controller-->
@@ -81,10 +81,16 @@
                                                 <constraint firstAttribute="centerY" secondItem="Ync-jg-fEL" secondAttribute="centerY" id="Z4K-oN-Xte"/>
                                                 <constraint firstAttribute="centerY" secondItem="nG4-fw-07d" secondAttribute="centerY" constant="-15" id="cjg-zB-V4V"/>
                                                 <constraint firstItem="nG4-fw-07d" firstAttribute="leading" secondItem="vPA-lV-rXU" secondAttribute="leading" constant="15" id="ddd-lm-lIK"/>
+                                                <constraint firstItem="Ync-jg-fEL" firstAttribute="leading" secondItem="nG4-fw-07d" secondAttribute="trailing" constant="15" id="iQw-iq-ff8"/>
                                                 <constraint firstItem="8e2-0i-0kx" firstAttribute="leading" secondItem="vPA-lV-rXU" secondAttribute="leading" constant="15" id="id9-iq-FbJ"/>
                                                 <constraint firstAttribute="centerY" secondItem="8e2-0i-0kx" secondAttribute="centerY" constant="15" id="nOJ-Jp-Ipz"/>
                                                 <constraint firstItem="Ync-jg-fEL" firstAttribute="leading" secondItem="nG4-fw-07d" secondAttribute="trailing" constant="15" id="yuf-rz-lTL"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="yuf-rz-lTL"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="firstNameLabel" destination="8e2-0i-0kx" id="Ssl-0f-Ysh"/>

@@ -110,7 +110,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
         let currentWidth = self.view.bounds.width
         let currentHeight = self.view.bounds.height
         
-        let newY = self.view.bounds.origin.y + textField.frame.origin.y - self.textFieldPadding
+        let newY = self.view.bounds.origin.y + textField.frame.origin.y - CGFloat(self.textFieldPadding)
         let currentX = self.view.bounds.origin.x
         
         UIView.animateWithDuration(0.3, animations: { () -> Void
@@ -264,7 +264,7 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UIImagePicker
     func changeOrDeleteImage(sender: AnyObject) {
         println("Image pressed")
         
-        let alertController = UIAlertController(title: "New Picture?", message: "Please choose a different picture", preferredStyle: UIAlertControllerStyle.ActionSheet)
+        let alertController = UIAlertController(title: "Delete?", message: "Are you sure you would like to delete the image?", preferredStyle: UIAlertControllerStyle.ActionSheet)
         
         let cancelOption = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil)
         
